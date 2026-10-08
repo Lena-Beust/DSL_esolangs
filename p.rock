@@ -1,25 +1,25 @@
-Listen to the music
-If the music is silence
-Shout "Without any rythm, I can't do anything. Give me something to dance on!"
+Listen to the music	(écoute la chaine de caractère attendue)
+If the music is silence		(test pour vérifier si une chaîne de caractère a été renseignée)
+Shout "Without any rythm, I can't do anything. Give me something to dance on!" 	(message si aucune chaîne de caractères n'est renseignée)
 Otherwise
-Cut the music into feelings
-Let Brian be null
-While feelings is greater than 0
-Roll feelings             (enleve un element de feelings)
-Build Brian up
-Yeah
+Cut the music into feelings   (découpage de la chaîne de caractère en caractères uniques)
+Let Brian be null	(Brian est le compteur de caractères contenus dans music)
+While feelings is greater than 0	
+Roll feelings             (Roll enlève un élément de feelings petit à petit)
+Build Brian up		(incrémente Brian petit à petit)
+Yeah	(fin du bloc If)
 
-Rock our love with 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
-Let the fidelity be hopeless
+Rock our love with 2, 3, 5, 7, 11, 13, 17, 19, 23, 29	(liste des 10 premiers nombres premiers)
+Let the fidelity be hopeless	(valeur par défaut pour fidelity qui sera comme un boolean pour tester si Brian est un des nombres premiers contenu dans love)
 While our love is greater than 0
-Roll our love into the sand 
-If the sand is Brian
-Put true into the fidelity
-Break it down
-Baby
+Roll our love into the sand 	(conversion du nombre contenu dans love en chaîne de caractères)
+If the sand is Brian	(comparaison entre Brian et le chiffre parcouru dans la liste des nombres premiers)
+Put true into the fidelity	(mise à jour du boolean)
+Break it down	(sortie du bloc If)
+Baby	(fin du bloc While)
 
-If the fidelity is true
-Whisper "You win the game, congratulation !"
+If the fidelity is true		(test de la valeur de fidelity)
+Whisper "You win the game, congratulation !"	(affichage message de fin)
 Otherwise
-Ambition says Try again, my dear
-Scream Ambition, baby
+Ambition says Try again...
+Scream Ambition, baby	(affichage du message de fin si le nombre de caractères dans music n'est pas un des nombres premiers listés)

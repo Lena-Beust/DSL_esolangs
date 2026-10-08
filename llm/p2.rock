@@ -1,0 +1,9 @@
+Listen to text
+
+Length is 0 For character in text Build Length up End
+
+Won is false
+
+If Length is 2 Won is true End If Length is 3 Won is true End If Length is 5 Won is true End If Length is 7 Won is true End If Length is 11 Won is true End If Length is 13 Won is true End If Length is 17 Won is true End If Length is 19 Won is true End If Length is 23 Won is true End If Length is 29 Won is true End
+
+If Won Say "You win the game, congratulation !" Else Say "Try again..." End

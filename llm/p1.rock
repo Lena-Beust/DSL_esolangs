@@ -1,0 +1,27 @@
+Listen to input
+
+Count is 0 For character in input Build Count up End
+
+Won is false
+
+If Count is 2 Won is true End
+
+If Count is 3 Won is true End
+
+If Count is 5 Won is true End
+
+If Count is 7 Won is true End
+
+If Count is 11 Won is true End
+
+If Count is 13 Won is true End
+
+If Count is 17 Won is true End
+
+If Count is 19 Won is true End
+
+If Count is 23 Won is true End
+
+If Count is 29 Won is true End
+
+If Won Say "You win the game, congratulation !" Else Say "Try again..." End

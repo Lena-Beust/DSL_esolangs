@@ -1,0 +1,31 @@
+Prime takes Number
+
+If Number is 2 Give back true End
+
+If Number is 3 Give back true End
+
+If Number is 5 Give back true End
+
+If Number is 7 Give back true End
+
+If Number is 11 Give back true End
+
+If Number is 13 Give back true End
+
+If Number is 17 Give back true End
+
+If Number is 19 Give back true End
+
+If Number is 23 Give back true End
+
+If Number is 29 Give back true End
+
+Give back false
+
+Listen to Text
+
+Length is 0
+
+For Character in Text Build Length up End
+
+If Prime taking Length Say "You win the game, congratulation !" Else Say "Try again..." End
