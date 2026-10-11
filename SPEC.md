@@ -1,6 +1,6 @@
 #Programmer dans un langage ésotérique
 
-Le langage sélectionné est Rockstar.
+Le langage sélectionné est Rockstar (lien vers esolang.org : https://esolangs.org/wiki/Rockstar).
 
 Le programme p.rock doit recevoir un entrée un chaîne de caractères. Le programme compte ensuite le nombre de lettre dans la chaîne de caractères renseignées et renvoit "You win the game, congratulation !" si ce nombre est égal aux 10 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19, 23, 29) ou "Try again..." si ce n'est pas le cas.
 

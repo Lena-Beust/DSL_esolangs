@@ -14,4 +14,6 @@
 > 
 > ./binaries/rockstar p.rock
 
-- **Utilisation de l'IA** : Un LLM a été utilisé pour rédiger run.sh pour lire les fichiers 01.in, 02.in, 03.in et 04.in et les comparer avec 01.out, 02.out, 03.out et 04.out. Ces fichiers présents dans tests/ ont été cependant rédigés à la main.
+
+- **Lancement des tests de p et p1, p2 et p3 (générés pas IA)** : 
+> python3 run.py

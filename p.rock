@@ -1,7 +1,4 @@
 Listen to the music	(écoute la chaine de caractère attendue)
-If the music is silence		(test pour vérifier si une chaîne de caractère a été renseignée)
-Shout "Without any rythm, I can't do anything. Give me something to dance on!" 	(message si aucune chaîne de caractères n'est renseignée)
-Otherwise
 Cut the music into feelings   (découpage de la chaîne de caractère en caractères uniques)
 Let Brian be null	(Brian est le compteur de caractères contenus dans music)
 While feelings is greater than 0	
