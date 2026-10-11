@@ -1,4 +1,5 @@
-> **Moi** : Le langage sélectionné est Rockstar (lien vers esolang.org : https://esolangs.org/wiki/Rockstar).
+> **Moi** :
+Le langage sélectionné est Rockstar (lien vers esolang.org : https://esolangs.org/wiki/Rockstar).
 
 Le programme p.rock doit recevoir un entrée un chaîne de caractères. Le programme compte ensuite le nombre de lettre dans la chaîne de caractères renseignées et renvoit "You win the game, congratulation !" si ce nombre est égal aux 10 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19, 23, 29) ou "Try again..." si ce n'est pas le cas.
 
@@ -6,7 +7,8 @@ Par exemple avec "Hello World!" (qui a 12 caractères en comptant les lettres, l
 
 L'interpréteur utilisé est Starship, l'interpréteur officiel de Rockstar.
 
-> **GPT-5.6 Luna. via ChatGPT** : 
+> **GPT-5.6 Luna. via ChatGPT** :
+
 Oui. Avec Rockstar 2.0 / Starship, on peut profiter de la boucle For ... in pour parcourir directement les caractères de la chaîne et incrémenter un compteur. La documentation officielle indique que cette forme de boucle parcourt tous les caractères d'une chaîne. RRockstar
 
 Voici un p.rock compatible avec cette approche :
@@ -79,9 +81,12 @@ La présence de End est adaptée à Starship/Rockstar 2.0, qui utilise notamment
 Documentation officielle Rockstar — Flow Control Dépôt officiel Rockstar / Starship
 
 
-> **Moi** : Propose-moi une autre solution de code :
+> **Moi** :
+
+Propose-moi une autre solution de code :
 
 > **GPT-5.6 Luna. via ChatGPT**:
+
 Oui. On peut faire une version assez différente : plutôt que d'utiliser un booléen Won et dix If séparés, on peut parcourir les caractères avec For, puis utiliser une chaîne contenant les nombres premiers et rechercher la valeur du compteur.
 
 Mais pour rester simple et robuste avec Starship, je te propose surtout cette variante avec une boucle Until et un compteur. La syntaxe Listen to, Until et Build ... up est bien supportée par Rockstar 2.0. 
@@ -198,7 +203,9 @@ La boucle For ... in parcourt bien les caractères d'une chaîne dans Rockstar, 
 
 À noter : Starship est bien l'interpréteur présent dans le dépôt officiel de Rockstar. 
 
-> **Moi** : Propose-moi un troisième code :
+> **Moi** :
+
+Propose-moi un troisième code :
 
 
 > **GPT-5.6 Luna. via ChatGPT**:
