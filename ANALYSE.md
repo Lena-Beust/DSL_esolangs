@@ -1,6 +1,6 @@
-#Analyse
+# Analyse
 
-# 1) Sémantique : 
+## 1) Sémantique : 
 
 D'un point de vue sémantique, les trois propositions du LLM calculent la même sortie pour la même entrée que p. En effet, les trois programmes testent si le nombre de caractères dans l'entrée saisie est égal ou pas au 10 premiers nombres premiers. Cela est très visible avec les différentes lignes de "If". Tout comme p, les trois programmes utilisent "Build ... up" pour construire la variable représentant le compteur de caractères. Les 4 scénarios de tests sont géres correctement par les programmes p1, p2 et p3 quand on utilise le script **run.py**.
 
@@ -8,7 +8,7 @@ Il est aussi intéressant de noter qu'il a bien été demandé à l'IA de géné
 
 On peut noter également que p1, p2 et p3 n'ont aucune dimension "musicale", ce qui fait pourtant parti du langage Rockstar. Le LLM utilise des noms de variables plutôt commun, sans poésie ou sens du rythme : "Count", "Length" ou "Number". p a été écrit pour essayer de raconter une histoire avec un champ lexical autour des sentiments, à la manière d'une chanson d'amour.
 
-# 2) Syntaxe :
+## 2) Syntaxe :
 
 D'un point de vue syntaxique, p1, p2 et p3 adoptent des stratégies différentes de p. Le programme p utilise comme structure de données (pour les 10 premiers nombres premiers) une liste ordonnée avec une boucle de test parcourant cette liste; tandis que p1, p2 et p3 font des tests unitaires sur chaque valeur possible.
 
