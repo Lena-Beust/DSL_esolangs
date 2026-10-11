@@ -1,27 +1,42 @@
-Listen to input
+Listen to Input
+Cut Input into Chars
+Put 0 into Count
+While Chars
+Roll Chars into Letter
+Build Count up
 
-Count is 0 For character in input Build Count up End
+Put false into Won
+If Count is 2
+Put true into Won
 
-Won is false
+If Count is 3
+Put true into Won
 
-If Count is 2 Won is true End
+If Count is 5
+Put true into Won
 
-If Count is 3 Won is true End
+If Count is 7
+Put true into Won
 
-If Count is 5 Won is true End
+If Count is 11
+Put true into Won
 
-If Count is 7 Won is true End
+If Count is 13
+Put true into Won
 
-If Count is 11 Won is true End
+If Count is 17
+Put true into Won
 
-If Count is 13 Won is true End
+If Count is 19
+Put true into Won
 
-If Count is 17 Won is true End
+If Count is 23
+Put true into Won
 
-If Count is 19 Won is true End
+If Count is 29
+Put true into Won
 
-If Count is 23 Won is true End
-
-If Count is 29 Won is true End
-
-If Won Say "You win the game, congratulation !" Else Say "Try again..." End
+If Won
+Say "You win the game, congratulation !"
+Else
+Say "Try again..."

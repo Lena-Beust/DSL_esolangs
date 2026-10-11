@@ -10,43 +10,59 @@ L'interpréteur utilisé est Starship, l'interpréteur officiel de Rockstar.
 Oui. Avec Rockstar 2.0 / Starship, on peut profiter de la boucle For ... in pour parcourir directement les caractères de la chaîne et incrémenter un compteur. La documentation officielle indique que cette forme de boucle parcourt tous les caractères d'une chaîne. RRockstar
 
 Voici un p.rock compatible avec cette approche :
+```
+Listen to Input
+Cut Input into Chars
+Put 0 into Count
+While Chars
+Roll Chars into Letter
+Build Count up
 
-Listen to input
+Put false into Won
+If Count is 2
+Put true into Won
 
-Count is 0 For character in input Build Count up End
+If Count is 3
+Put true into Won
 
-Won is false
+If Count is 5
+Put true into Won
 
-If Count is 2 Won is true End
+If Count is 7
+Put true into Won
 
-If Count is 3 Won is true End
+If Count is 11
+Put true into Won
 
-If Count is 5 Won is true End
+If Count is 13
+Put true into Won
 
-If Count is 7 Won is true End
+If Count is 17
+Put true into Won
 
-If Count is 11 Won is true End
+If Count is 19
+Put true into Won
 
-If Count is 13 Won is true End
+If Count is 23
+Put true into Won
 
-If Count is 17 Won is true End
+If Count is 29
+Put true into Won
 
-If Count is 19 Won is true End
-
-If Count is 23 Won is true End
-
-If Count is 29 Won is true End
-
-If Won Say "You win the game, congratulation !" Else Say "Try again..." End
+If Won
+Say "You win the game, congratulation !"
+Else
+Say "Try again..."
+```
 
 Comment ça fonctionne
 
     - Listen to input lit une ligne depuis l'entrée standard et la stocke dans input. GGitHub
     - Count is 0 initialise le compteur.
     - For character in input parcourt chaque caractère de la chaîne.
-    - Build Count up augmente le compteur de 1 à chaque caractère.
-    - On teste ensuite si Count vaut l'un des dix premiers nombres premiers : 2, 3, 5, 7, 11, 13, 17, 19, 23 ou 29.
-    - Si c'est le cas, Won devient true et le programme affiche le message de victoire.
+    -  Build Count up augmente le compteur de 1 à chaque caractère.
+    -  On teste ensuite si Count vaut l'un des dix premiers nombres premiers : 2, 3, 5, 7, 11, 13, 17, 19, 23 ou 29.
+    -  Si c'est le cas, Won devient true et le programme affiche le message de victoire.
 
 Ainsi :
 
@@ -70,27 +86,107 @@ Oui. On peut faire une version assez différente : plutôt que d'utiliser un boo
 
 Mais pour rester simple et robuste avec Starship, je te propose surtout cette variante avec une boucle Until et un compteur. La syntaxe Listen to, Until et Build ... up est bien supportée par Rockstar 2.0. 
 
-Listen to text
+```
+Listen to Text
+Cut Text into Chars
+Put 0 into Length
+While Chars
+Roll Chars into Letter
+Build Length up
 
-Length is 0 For character in text Build Length up End
+Until Length is nothing
+If Length is 2
+Say "You win the game, congratulation !"
+Break it down
 
-Until Length is nothing If Length is 2 Say "You win the game, congratulation !" Break End If Length is 3 Say "You win the game, congratulation !" Break End If Length is 5 Say "You win the game, congratulation !" Break End If Length is 7 Say "You win the game, congratulation !" Break End If Length is 11 Say "You win the game, congratulation !" Break End If Length is 13 Say "You win the game, congratulation !" Break End If Length is 17 Say "You win the game, congratulation !" Break End If Length is 19 Say "You win the game, congratulation !" Break End If Length is 23 Say "You win the game, congratulation !" Break End If Length is 29 Say "You win the game, congratulation !" Break End
+If Length is 3
+Say "You win the game, congratulation !"
+Break it down
 
-Say "Try again..." Break End
+If Length is 5
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 7
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 11
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 13
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 17
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 19
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 23
+Say "You win the game, congratulation !"
+Break it down
+
+If Length is 29
+Say "You win the game, congratulation !"
+Break it down
+
+Say "Try again..."
+Break it down
+```
 
 Cependant, cette version a un défaut : Until Length is nothing n'est pas réellement nécessaire et rend le programme moins élégant.
 
 Je préfère donc une vraie variante, qui utilise une variable booléenne mais évite de répéter le message de victoire :
 
-Listen to text
+```
+Listen to Text
+Cut Text into Chars
+Put 0 into Length
+While Chars
+Roll Chars into Letter
+Build Length up
 
-Length is 0 For character in text Build Length up End
+Put false into Won
+If Length is 2
+Put true into Won
 
-Won is false
+If Length is 3
+Put true into Won
 
-If Length is 2 Won is true End If Length is 3 Won is true End If Length is 5 Won is true End If Length is 7 Won is true End If Length is 11 Won is true End If Length is 13 Won is true End If Length is 17 Won is true End If Length is 19 Won is true End If Length is 23 Won is true End If Length is 29 Won is true End
+If Length is 5
+Put true into Won
 
-If Won Say "You win the game, congratulation !" Else Say "Try again..." End
+If Length is 7
+Put true into Won
+
+If Length is 11
+Put true into Won
+
+If Length is 13
+Put true into Won
+
+If Length is 17
+Put true into Won
+
+If Length is 19
+Put true into Won
+
+If Length is 23
+Put true into Won
+
+If Length is 29
+Put true into Won
+
+If Won
+Say "You win the game, congratulation !"
+Else
+Say "Try again..."
+```
 
 Cette seconde version est probablement celle que je rendrais pour un exercice : elle sépare clairement les trois étapes :
 
@@ -109,27 +205,43 @@ La boucle For ... in parcourt bien les caractères d'une chaîne dans Rockstar, 
 
 Oui. Pour un troisième code, je te propose de changer complètement l'approche : au lieu de tester directement les dix valeurs, on va déterminer si la longueur est un nombre premier en utilisant une fonction de divisibilité. Rockstar permet de définir des fonctions avec takes, et Give back permet de retourner une valeur.
 
-IsPrime takes Number
+```
+Primality takes Number
+If Number is less than 2
+Give back false
 
-If Number is 2 Give back true End
+If Number is 2
+Give back true
 
-If Number is 3 Give back true End
+If Number is 3
+Give back true
 
-Divisor is 2
+Put 2 into Divisor
+While Divisor is less than Number
+Put Number into Rest
+While Rest is as high as Divisor
+Put Rest minus Divisor into Rest
 
-Until Divisor is Number If Number over Divisor is Number Build Divisor up End
+If Rest is 0
+Give back false
 
-If Number over Divisor times Divisor is Number Give back false End
-
-Build Divisor up End
+Build Divisor up
 
 Give back true
 
 Listen to Text
+Cut Text into Chars
+Put 0 into Length
+While Chars
+Roll Chars into Letter
+Build Length up
 
-Length is 0 For Character in Text Build Length up End
-
-If IsPrime taking Length Say "You win the game, congratulation !" Else Say "Try again..." End
+Put Primality taking Length into Result
+If Result
+Say "You win the game, congratulation !"
+Else
+Say "Try again..."
+```
 
 ⚠️ Mais il y a un problème
 
@@ -137,37 +249,53 @@ Cette version est plus compliquée que nécessaire et surtout, l'expression util
 
 Pour ton exercice, je te conseille donc plutôt une troisième solution simple et réellement adaptée au problème : utiliser une fonction qui teste directement les dix valeurs autorisées.
 
-Prime takes Number
+```
+Primality takes Number
+If Number is 2
+Give back true
 
-If Number is 2 Give back true End
+If Number is 3
+Give back true
 
-If Number is 3 Give back true End
+If Number is 5
+Give back true
 
-If Number is 5 Give back true End
+If Number is 7
+Give back true
 
-If Number is 7 Give back true End
+If Number is 11
+Give back true
 
-If Number is 11 Give back true End
+If Number is 13
+Give back true
 
-If Number is 13 Give back true End
+If Number is 17
+Give back true
 
-If Number is 17 Give back true End
+If Number is 19
+Give back true
 
-If Number is 19 Give back true End
+If Number is 23
+Give back true
 
-If Number is 23 Give back true End
-
-If Number is 29 Give back true End
+If Number is 29
+Give back true
 
 Give back false
 
 Listen to Text
+Cut Text into Chars
+Put 0 into Length
+While Chars
+Roll Chars into Letter
+Build Length up
 
-Length is 0
-
-For Character in Text Build Length up End
-
-If Prime taking Length Say "You win the game, congratulation !" Else Say "Try again..." End
+Put Primality taking Length into Result
+If Result
+Say "You win the game, congratulation !"
+Else
+Say "Try again..."
+```
 
 Cette dernière version a l'avantage d'utiliser une fonction Prime : le programme principal est donc très lisible :
 
