@@ -1,4 +1,4 @@
-#Programmer dans un langage ésotérique
+# Programmer dans un langage ésotérique
 
 Le langage sélectionné est Rockstar (lien vers esolang.org : https://esolangs.org/wiki/Rockstar).
 
